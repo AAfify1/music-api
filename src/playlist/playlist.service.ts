@@ -1,10 +1,10 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { AddTrackDto } from 'src/dto/playlist/add-track.dto';
-import { CreatePlaylistDto } from 'src/dto/playlist/create-playlist.dto';
-import { UpdatePlaylistDto } from 'src/dto/playlist/update-playlist.dto';
-import { IPlaylist } from 'src/interface/playlist.interface';
+import { AddTrackDto } from 'src/playlist/add-track.dto';
+import { CreatePlaylistDto } from 'src/playlist/create-playlist.dto';
+import { UpdatePlaylistDto } from 'src/playlist/update-playlist.dto';
+import { IPlaylist } from 'src/playlist/playlist.interface';
 
 @Injectable()
 export class PlaylistService {

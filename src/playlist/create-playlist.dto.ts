@@ -1,5 +1,5 @@
 import { IsArray, IsNotEmpty, IsNumber, IsString } from 'class-validator';
-import { Track } from 'src/schema/track.schema';
+import { Track } from 'src/track/track.schema';
 export class CreatePlaylistDto {
   @IsString()
   @IsNotEmpty()

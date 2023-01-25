@@ -9,9 +9,9 @@ import {
   Put,
   Res,
 } from '@nestjs/common';
-import { CreateTrackDto } from 'src/dto/track/create-track.dto';
-import { UpdateTrackDto } from 'src/dto/track/update-track.dto';
-import { TrackService } from 'src/service/track/track.service';
+import { CreateTrackDto } from 'src/track/create-track.dto';
+import { UpdateTrackDto } from 'src/track/update-track.dto';
+import { TrackService } from 'src/track/track.service';
 @Controller('track')
 export class TrackController {
   constructor(private readonly trackService: TrackService) {}

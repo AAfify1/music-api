@@ -1,9 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { CreateTrackDto } from 'src/dto/track/create-track.dto';
-import { UpdateTrackDto } from 'src/dto/track/update-track.dto';
-import { ITrack } from 'src/interface/track.interface';
+import { CreateTrackDto } from 'src/track/create-track.dto';
+import { UpdateTrackDto } from 'src/track/update-track.dto';
+import { ITrack } from 'src/track/track.interface';
 
 @Injectable()
 export class TrackService {

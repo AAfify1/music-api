@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Track } from './track.schema';
+import { Track } from '../track/track.schema';
 @Schema()
 export class Playlist {
   @Prop()

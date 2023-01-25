@@ -8,11 +8,13 @@ import {
   Post,
   Put,
   Res,
+  UseGuards,
 } from '@nestjs/common';
-import { AddTrackDto } from 'src/dto/playlist/add-track.dto';
-import { CreatePlaylistDto } from 'src/dto/playlist/create-playlist.dto';
-import { UpdatePlaylistDto } from 'src/dto/playlist/update-playlist.dto';
-import { PlaylistService } from 'src/service/playlist/playlist.service';
+import { AddTrackDto } from 'src/playlist/add-track.dto';
+import { CreatePlaylistDto } from 'src/playlist/create-playlist.dto';
+import { UpdatePlaylistDto } from 'src/playlist/update-playlist.dto';
+import { PlaylistService } from 'src/playlist/playlist.service';
+import { AuthGuard } from '@nestjs/passport';
 @Controller('playlist')
 export class PlaylistController {
   constructor(private readonly playlistService: PlaylistService) {}
@@ -95,6 +97,8 @@ export class PlaylistController {
       return response.status(err.status).json(err.response);
     }
   }
+
+  @UseGuards(AuthGuard('jwt'))
   @Get()
   async getPlaylists(@Res() response) {
     try {
